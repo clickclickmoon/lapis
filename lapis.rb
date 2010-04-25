@@ -125,7 +125,8 @@ module Lapis
     end
         
     def Parser.parse( input )
-      return parse( input )
+      parser = Parser.new
+      return parser.parse( input )
     end
     
     def parse( input )
