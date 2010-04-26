@@ -41,7 +41,9 @@ class TestParser < Test::Unit::TestCase
     ]
 
   STRING_TESTS = 
-    [['("simple")', ["simple"]]
+    [['("simple")', ["simple"]],
+     ['("()asdf")', ["()asdf"]],
+     ['("\"\"")', ['\"\"']]
     ]
 
   def test_INTEGER_TESTS; INTEGER_TESTS.each { |lapis, array| run_test_pair( lapis, array ) }; end

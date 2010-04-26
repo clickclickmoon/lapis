@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# encoding: utf-8 - Lapis Language Ruby Module
+# -*- coding: utf-8 -*- Lapis Language Ruby Module
 # Andy Brown <neorab@gmail.com> [April, 12, 2010]
 
 ### Ruby Class Extensions for Lapis
@@ -31,7 +31,7 @@ module Lapis
     :atom? => lambda{ |x| (x.kind_of?(List) ? :nil : :t) },
     :eq? => lambda{ |x, y| (x.equal?( y ) ? :t : :nil) },
     :list => lambda{ |*args| List.new( args ) },
-    :quote => lambda{ |*args| puts( *args ); nil }
+    :puts => lambda{ |*args| puts( *args ); nil }
   }
   
   
