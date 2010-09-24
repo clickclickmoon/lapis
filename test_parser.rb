@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-require 'lapis.rb'
+require_relative "lapis"
 
 test_string = Array.new
 
@@ -44,11 +44,11 @@ test_string << %q{ ( 1.2 3 4 5 ( 6 ( 7 ( 8 ))))}
 test_string << %q{ (("/λ" 12))}
 test_string << %q{ (// 1.1 ())}
 
-#parser = Lapis::Parser.new
-#test_string.each do |string|
-#    puts "string: " + string
-#    puts parser.parse( string ).inspect
-#end
+parser = Lapis::Parser.new
+test_string.each do |string|
+    puts "string: " + string
+    puts parser.parse( string ).inspect
+end
 
-lapis = Lapis::Interpreter.new
-lapis.repl
+#lapis = Lapis::Interpreter.new
+#lapis.repl
